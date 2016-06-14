@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+   <head>
+       <link rel="stylesheet" type="text/css" href="style.css">
+       <style>
+           body {
+               text-align: center;
+           }
+           h2 {
+               font-size: 25px;
+               text-align: center;
+               color: blue; 
+           }
+           p {
+               text-align: center;
+           }
+       </style>
+   </head>
+   
+   <body>
+    <h2>Mastermind</h2>   
+    <p>
+    Objective of the game: You have to guess the 4 secret colors using as few tries as possible. 
+    <p>The 6 colors you can choose from are: Red (R), Orange (O), Yellow (Y), Green (G), Blue (B), Purple (P).</p>
+    Please guess the sequence of the 4 colors in the correct order.
+    </p>
+    <!--Secret: {{secret}}-->
+    <form action="/on_guess" method="get">
+      Guess:<input type="text" name="guess" value={{guess}}>
+      
+      <input type="submit" value="Submit Guess"></div>
+      
+    </form>
+
+
+   Feedback: {{feedback}}
+
+   </body>
+</html>
+{% endautoescape %}

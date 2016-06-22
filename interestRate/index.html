@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <h2>Interest Calculator</h2>   
+    <h3>Enter the principal and interest rate</h3>
+
+    <form action="/on_calculate" method="get">
+      <p>Principal:<input type="text" name="principal" value={{principal}}></p>
+      <p>Rate(%):  <input type="text" name="rate" value={{rate}}></p>
+      <p>Years:<input type="text" name="years" value={{years}}></p>
+      <input type="submit" value="Calculate"></div>
+    </form>
+    
+    <p>Interest Earned: {{interest}}</p>
+    
+    <p>Final Principal: {{finalPrincipal}}</p>
+   	
+  </body>
+</html>

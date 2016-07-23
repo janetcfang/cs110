@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script src="index.html"></script>
+<title> Fruits
+ </title>
+<style>
+.button {
+		background-color: #99ccff;
+  		border-radius: 25px;
+  		color: white;
+  		padding: 15px 32px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+  		font-size: 20px;
+  		margin: 4px 2px;
+  		cursor: pointer;
+	}	
+	.button_tool {
+  		background-color: #99bbff;
+  		border-radius: 25px;
+  		color: white;
+  		padding: 15px 32px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: inline-block;
+  		font-size: 20px;
+  		margin: 4px 2px;
+  		cursor: pointer;
+	}
+table, th, td{
+    	text-align: center;
+	}
+	th, td {
+    	padding: 5px;
+	}
+	.wrapper {  margin: 0 }
+	.block-center { float:center; }
+	.block-right { float: right; }
+	
+</style>
+<script>
+function displayItems (items) {
+  if (items !=null)
+    alert(items + " item(s) added to the cart");
+}
+function validateForm() {
+    var x = document.getElementsByName("Add[]");
+    var chklength = x.length;  
+    var n_selected = 0;
+    var book_list = "";
+
+
+    for(k=0;k< chklength;k++)
+    {
+      if(x[k].checked)
+        book_list+=";"+x[k].value;
+        n_selected++;
+    } 
+     if (n_selected==0) {
+        alert("Please Select at least one item y");
+        return false;
+    }
+     var books = document.getElementById("books");
+     books.value = book_list;
+}
+
+</script>
+</head>
+<body onload="displayItems()">
+  <center>
+  
+<br>	<table style="width:70%">
+  <h1><font size="5" color="1a53ff"> FRUITS </font></h1>
+  <a href="file:///Users/Janet/Desktop/cart/viewcart.html" class="button_tool">View Cart</a>
+  <br>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>	
+    <th>Price</th>
+    <th>Select</th>	
+  </tr>
+  
+  <tr>
+   	<td>Apples</td>   
+    <td><img src="images/fru-apples.jpg" style="width:100px;height:90px;"></td>
+    <td>.99</td>
+    <td>
+      <input type="checkbox" name="Add[]" value="Apple Juice+Drinks+.99+Drinks"></td>
+  </tr>
+  
+  <tr>
+   	<td>Oranges</td>   
+    <td><img src="images/fru-oranges.jpg" style="width:100px;height:80px;"></td>
+    <td>.99</td>
+    <td>
+      <input type="checkbox" name="Add[]" value="Aldous Huxley+Brave New World+8.81+Fiction"></td>
+  </tr>
+  
+  <tr>
+   	<td>Strawberries</td>   
+    <td><img src="images/fru-strawberries.jpg" style="width:100px;height:90px;"></td>
+    <td>.99</td>
+    <td>
+      <input type="checkbox" name="Add[]" value="Frank Herbert+Dune+7.99+Fiction"></td>
+  </tr>
+  
+  <tr>
+   <td>Watermelon</td>   
+    <td><img src="images/fru-watermelon.jpg" style="width:100px;height:80px;"></td>
+    <td>.99</td>
+    <td>
+      <input type="checkbox" name="Add[]" value="Orson Scoot Card+Ender&#39;s Game+5.99+Fiction"></td>
+  </tr>
+  
+  <tr>
+   	<td>Mango</td>   
+    <td><img src="images/fru-mango.jpg" style="width:100px;height:90px;"></td>
+    <td>.99</td>
+    <td>
+      <input type="checkbox" name="Add[]" value="Francine Rivers+Redeeming Love+9.4+Fiction"></td>
+  </tr>
+</table>
+<p>
+</table>
+</form>
+<br>
+<br>
+  		<input type="hidden" id="food" name="foods_list" value"">
+  		<input type="submit" value="Add to Cart">
+  		<p>
+<a href="file:///Users/Janet/Desktop/cart/index.html" class="button">Go to Main Page</a>
+</center>
+</body>
+</html>
